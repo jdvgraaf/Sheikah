@@ -54,7 +54,7 @@ export default function Home() {
   const [sentModalOpen, setSentModalOpen] = useState(false);
   const [sentNumber, setSentNumber] = useState("");
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setPhoneNumber(event.target.value);
   };
 
@@ -139,7 +139,7 @@ export default function Home() {
                   name="textmask"
                   id="formatted-text-mask-input"
                   InputProps={{
-                    inputComponent: TextMaskCustom, // we are added the mask component here
+                    inputComponent: TextMaskCustom as any, // we are added the mask component here
                   }}
                   autoComplete="off"
                 />
