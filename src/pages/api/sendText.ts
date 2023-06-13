@@ -82,11 +82,11 @@ export default async function handler(
 
     // Send the text message
     try {
-      await client.messages.create({
-          body: template,
-          from: twilioPhoneNumber,
-          to: phoneNumber,
-        });
+      // await client.messages.create({
+      //     body: template,
+      //     from: twilioPhoneNumber,
+      //     to: phoneNumber,
+      //   });
       console.log({
         body: template,
         from: twilioPhoneNumber,
